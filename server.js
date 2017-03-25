@@ -9,8 +9,62 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+var content = {
+    title: 'Article One',
+    heading: 'Artice One',
+    date: '25 March',
+    content: ` <P>
+             First paragraph of the first article , i have now made a page in my web app for an article , lestg get started with the server side temnplating to make more such pages dynamically.
+         </P>
+         
+         <p>
+             lorel ipsum lorel ipsum lorel ipsum lorel ipsumlorel ipsum lorel ipsum lorel ipsum lorel ipsum v lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum 
+         </p> `
+};
+
+function createtemplate(data){
+    var title = data.title;
+    var date = data.date;
+    var heading = data.heading;
+    var content = data.content;
+    
+    
+    var htmltemplate = `
+      
+      <html>
+         <head>
+            <title>${title}</title>
+            <meta name = "viewport" content="width = device-width, intial-scale= 1"/>
+             <link href="/ui/style.css" rel="stylesheet" />
+        </head>
+        <body>
+          <div class = "container">
+          <div> <a href = "/" >Home</a></div>
+          <hr/>
+          <div>
+              <h3>${heading}</h3>
+          </div>
+          
+         <div>
+             <P>${date}</P>
+         </div>
+         
+         <div id="content">
+             
+             ${content}
+         </div>
+          </div>
+        </body>
+    </html>  
+    `;
+    
+return htmltemplate;
+}
+
+
+
 app.get('/article1', function (req, res) {
- res.sendFile(path.join(__dirname, 'ui', 'article1.html'));
+ res.send(createtemplate(content));
 });
 
 
