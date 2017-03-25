@@ -1,6 +1,9 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+ var counter1 = 0;
+    var counter2 = 0;
+    var counter3 = 0;
 
 var app = express();
 app.use(morgan('combined'));
@@ -102,9 +105,7 @@ return htmltemplate;
 app.get('/:articlename', function (req, res){
     var articlename=req.params.articlename;
  res.send(createtemplate(Articles[articlename]));
- var counter1 = 0;
-    var counter2 = 0;
-    var counter3 = 0;
+
     if(articlename==article1){
         counter1 = counter1 + 1;
     }
