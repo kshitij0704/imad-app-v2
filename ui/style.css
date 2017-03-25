@@ -1,6 +1,6 @@
 body {
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color: #dedede;
     margin-top: 60px;
 }
 
@@ -22,5 +22,5 @@ body {
  .container{
      max-width: 80%;
      margin: 0 auto;
-     color: grey;
+     color: #505050;
  }
