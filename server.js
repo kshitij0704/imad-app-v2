@@ -100,8 +100,22 @@ return htmltemplate;
 
 
 app.get('/:articlename', function (req, res){
-    var articlename=req.params.articlename;    
+    var articlename=req.params.articlename;
  res.send(createtemplate(Articles[articlename]));
+ var counter1 = 0;
+    var counter2 = 0;
+    var counter3 = 0;
+    if(articlename==article1){
+        counter1 = counter1 + 1;
+    }
+    
+    if(articlename==article2){
+        counter2 = counter2 + 1;
+    }
+    
+    if(articlename==article3){
+        counter3 = counter3 + 1;
+    }
 });
 
 
