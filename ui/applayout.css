@@ -1,10 +1,3 @@
-/*
-HTML 5 Template Name: Basic 78
-File: Layout CSS
-Author: OS Templates
-Author URI: http://www.os-templates.com/
-Licence: <a href="http://www.os-templates.com/template-terms">Website Template Licence</a>
-*/
 
 html{overflow-y:scroll;} /* Forces a scrollbar when the viewport is larger than the websites content - CSS3 */
 
@@ -37,7 +30,7 @@ q:after{content:' „'; font-size:26px; line-height:0;}
 
 /* ----------------------------------------------Wrapper-------------------------------------*/
 
-div.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
+.wrapper{display:block; width:100%; margin:0; padding:0; text-align:left;}
 
 .row1, .row1 a{color:#C0BAB6; background-color:#333333;}
 .row2{color:#979797; background-color:#FFFFFF;}
@@ -68,7 +61,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 .three_third{width:960px; float:none; margin-right:0; clear:both;}
 .lastbox{margin-right:0;}
 
-/*----------------------------------------------Header-------------------------------------*/
+
 
 #header{padding:20px 0;}
 
@@ -88,18 +81,18 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #header nav li a{color:#C0BAB6; background-color:#232323;}
 #header nav li a:hover{color:#FF9900; background-color:#232323;}
 
-/*----------------------------------------------Content Area-------------------------------------*/
+
 
 #container{padding:30px 0;}
 #container section{display:block; width:100%; margin:0 0 30px 0; padding:0;}
 #container .last{margin:0;}
 #container .more{text-align:right;}
 
-/* ------Slider-----*/
+
 
 #container #slider{}
 
-/* ------Main Content-----*/
+
 
 #container #homepage{line-height:1.6em;}
 #container #homepage section{margin:0;}
@@ -120,7 +113,7 @@ input, textarea, select{font-size:12px; font-family:Georgia,"Times New Roman",Ti
 #container #homepage .fl_right article figure h2{font-size:14px;}
 #container #homepage .fl_right article figure footer{}
 
-/*----------------------------------------------Footer-------------------------------------*/
+
 
 #footer{padding:20px 0;}
 #footer p{margin:0; padding:0;}
