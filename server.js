@@ -9,7 +9,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var content = {
+var Articles = {
+    'article1':{
     title: 'Article One',
     heading: 'Artice One',
     date: '25 March',
@@ -19,7 +20,30 @@ var content = {
          
          <p>
              lorel ipsum lorel ipsum lorel ipsum lorel ipsumlorel ipsum lorel ipsum lorel ipsum lorel ipsum v lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum 
+         </p> `},
+    'article2':{
+        title: 'Article Two',
+    heading: 'Artice Two',
+    date: '15 March',
+    content: ` <P>
+             First paragraph of the first article , i have now made a page in my web app for an article , lestg get started with the server side temnplating to make more such pages dynamically.
+         </P>
+         
+         <p>
+             lorel ipsum lorel ipsum lorel ipsum lorel ipsumlorel ipsum lorel ipsum lorel ipsum lorel ipsum v lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum 
+         </p> `},
+    'article3':{
+        title: 'Article three',
+    heading: 'Artice Three',
+    date: '05 March',
+    content: ` <P>
+             First paragraph of the first article , i have now made a page in my web app for an article , lestg get started with the server side temnplating to make more such pages dynamically.
+         </P>
+         
+         <p>
+             lorel ipsum lorel ipsum lorel ipsum lorel ipsumlorel ipsum lorel ipsum lorel ipsum lorel ipsum v lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum lorel ipsum 
          </p> `
+    }
 };
 
 function createtemplate(data){
@@ -63,8 +87,9 @@ return htmltemplate;
 
 
 
-app.get('/article1', function (req, res) {
- res.send(createtemplate(content));
+app.get('/:articlename', function (req, res){
+    var articlename=req.params.articlename;    
+ res.send(createtemplate(Articles[articlename]));
 });
 
 
