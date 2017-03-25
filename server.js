@@ -14,7 +14,7 @@ app.get('/webapp', function (req, res) {
 });
 
 app.get('/ui/applayout.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'applayout.html'));
+  res.sendFile(path.join(__dirname, 'ui', 'applayout.css'));
 });
 
 var Articles = {
