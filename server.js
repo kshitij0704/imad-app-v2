@@ -75,7 +75,7 @@ function createtemplate(data){
         </head>
         <body>
           <div class = "container">
-          <div> <a href = "/" >Home</a></div>
+          <div> <a href = "/ui/appindex.html" >Home</a></div>
           <hr/>
           <div>
               <h3>${heading}</h3>
